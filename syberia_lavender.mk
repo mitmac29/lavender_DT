@@ -8,11 +8,20 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common LineageOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit common stuff
+$(call inherit-product, vendor/syberia/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+DEVICE_MAINTAINER := MiteshMacwana
+SYBERIA_MAINTAINER := MiteshMacwana
+WITH_GMS := true
+
+# Inherit GMS
+$(call inherit-product, vendor/google/gms/config.mk)
+
+# Inherit Telephony
+$(call inherit-product, vendor/syberia/config/telephony.mk)
 
 # Sony Dolby
 $(call inherit-product, vendor/dolby/config.mk)
@@ -22,7 +31,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/device-hidl.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_lavender
+PRODUCT_NAME := syberia_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
