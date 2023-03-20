@@ -34,7 +34,8 @@ BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += device/xiaomi/lavender \
                             hardware/google/interfaces \
-                            hardware/google/pixel
+                            hardware/google/pixel \
+                            hardware/qcom-caf/msm8998
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
