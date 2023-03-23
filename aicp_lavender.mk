@@ -8,21 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common full DerpFest stuff
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit common full AICP stuff
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-DERP_MAINTAINER := MiteshMacwana
+AICP_MAINTAINER := MiteshMacwana
 DEVICE_MAINTAINER := MiteshMacwana
 MAINTAINER_NAME := MiteshMacwana
-WITH_GMS := true
+#WITH_GMS := true
 
 # Inherit GMS
-$(call inherit-product, vendor/gms/products/gms.mk)
+#$(call inherit-product, vendor/gms/products/gms.mk)
 
 # Inherit telephony
-$(call inherit-product, vendor/derp/config/telephony.mk)
+$(call inherit-product, vendor/aicp/config/telephony.mk)
 
 # Sony Dolby
 $(call inherit-product, vendor/dolby/config.mk)
@@ -32,7 +32,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/device-hidl.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_lavender
+PRODUCT_NAME := aicp_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
