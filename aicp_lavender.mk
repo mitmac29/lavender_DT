@@ -16,10 +16,10 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 AICP_MAINTAINER := MiteshMacwana
 DEVICE_MAINTAINER := MiteshMacwana
 MAINTAINER_NAME := MiteshMacwana
-#WITH_GMS := true
+WITH_GMS := true
 
 # Inherit GMS
-#$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 # Inherit telephony
 $(call inherit-product, vendor/aicp/config/telephony.mk)
