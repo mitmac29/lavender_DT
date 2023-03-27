@@ -79,6 +79,9 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
+TARGET_USES_VULKAN := true
+TARGET_DISPLAY_USE_SMOOTH_MOTION := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -106,7 +109,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-     $(COMMON_PATH)/dolby/manifests/dolby_framework_matrix.xml
+     $(DEVICE_PATH)/dolby/manifests/dolby_framework_matrix.xml
 endif
 
 # Media

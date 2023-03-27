@@ -24,7 +24,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 # Display Device Config
 PRODUCT_COPY_FILES += \
@@ -161,7 +161,7 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_USES_MIUI_DOLBY),true)
 # Miui Dolby Engine Topic
 # Dolby Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/dolby
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/dolby
 
 # Dolby Props
 PRODUCT_VENDOR_PROPERTIES += \
@@ -503,3 +503,7 @@ PRODUCT_PACKAGES += \
 # DeviceDoze
 PRODUCT_PACKAGES += \
     DeviceDoze
+
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
