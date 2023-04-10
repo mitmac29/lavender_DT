@@ -8,21 +8,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common full AICP stuff
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+# Inherit common full AfterLifePrjkt stuff
+$(call inherit-product, vendor/aosp/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-AICP_MAINTAINER := MiteshMacwana
+WITH_CORE_GAPPS := true
 DEVICE_MAINTAINER := MiteshMacwana
 MAINTAINER_NAME := MiteshMacwana
-WITH_GMS := true
-
-# Inherit GMS
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 # Inherit telephony
-$(call inherit-product, vendor/aicp/config/telephony.mk)
+$(call inherit-product, vendor/aosp/config/telephony.mk)
 
 # Sony Dolby
 $(call inherit-product, vendor/dolby/config.mk)
@@ -32,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/device-hidl.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aicp_lavender
+PRODUCT_NAME := aosp_lavender
 PRODUCT_DEVICE := lavender
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7
@@ -44,4 +40,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="lavender" \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
 
-BUILD_FINGERPRINT :="google/cheetah/cheetah:13/TQ2A.230305.008.C1/9619669:user/release-keys"
+BUILD_FINGERPRINT :="google/raven/raven:13/TP1A.220624.021/8877034:user/release-keys"
