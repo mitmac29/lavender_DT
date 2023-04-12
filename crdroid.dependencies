@@ -1,6 +1,6 @@
 [
   {
-    "repository": "mitmac29/lavender_DT.git",
+    "repository": "mitmac29/kernel_xiaomi_lavender.git",
     "target_path": "kernel/xiaomi/lavender",
     "branch": "qti-oldcam"
   },
