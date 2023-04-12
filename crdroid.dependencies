@@ -1,11 +1,11 @@
 [
   {
-    "repository": "crdroidandroid/android_kernel_xiaomi_lavender",
+    "repository": "mitmac29/lavender_DT.git",
     "target_path": "kernel/xiaomi/lavender",
-    "branch": "qti"
+    "branch": "qti-oldcam"
   },
   {
-    "repository": "crdroidandroid/android_vendor_xiaomi_lavender",
+    "repository": "mitmac29/vendor_xiaomi_lavender",
     "target_path": "vendor/xiaomi/lavender",
     "branch": "12.1"
   }
