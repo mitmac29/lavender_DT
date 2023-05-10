@@ -18,6 +18,8 @@ DEVICE_MAINTAINER := MiteshMacwana
 MAINTAINER_NAME := MiteshMacwana
 AICP_MAINTAINER := MiteshMacwana
 
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 # Inherit telephony
 $(call inherit-product, vendor/aicp/config/telephony.mk)
 
