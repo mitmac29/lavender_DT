@@ -467,7 +467,7 @@ PRODUCT_COPY_FILES += \
 
 # DeviceSettings
 PRODUCT_PACKAGES += \
-   DeviceSettings
+    DeviceSettings
 
 # DeviceDoze
 PRODUCT_PACKAGES += \
